@@ -1,0 +1,128 @@
+.home-nav {
+    border-bottom: 1px solid $white;
+    @include screen;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.navbar-bgWhite {
+    background-color: $white;
+    border-bottom: none;
+    box-shadow: 0px 4px 4px 0px rgba($color: #000000, $alpha: 0.25);
+}
+
+h1 {
+    font-size: initial;
+    margin-left: 4%;
+}
+.logo {
+    min-width: 105px;
+    height: 20px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: cover;
+    @include xsmall {
+        min-width: 136px;
+        height: 25px;
+    }
+    @include medium {
+        min-width: 180px;
+        height: 33px;
+    }
+}
+
+.menu-btn {
+    outline: none;
+    border: none;
+    background-color: $main;
+    @include padding(10px, 6px);
+    @include small {
+        @include padding(16px, 12px);
+    }
+    .menu-icon {
+        line-height: 1;
+        @include large {
+            font-size: 20px;
+        }
+    }
+    .menu-text {
+        font-size: 14px;
+        @include large {
+            font-size: 16px;
+        }
+    }
+}
+.offcanvas-collapse {
+    box-shadow: 0px 4px 4px 4px rgba($color: #000000, $alpha: 0.25);
+    position: fixed;
+    top: 0; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    z-index: 100;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    visibility: hidden;
+    background-image: url("/frontEndPackage/images/quality-bg.png");
+    transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    // @include xsmall {
+    //     width: 55%;
+    // }
+    @include small {
+        width: 45%;
+    }
+    @include medium {
+        width: 35%;
+    }
+    @include large {
+        max-width: 25%;
+    }
+    .img-container {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        width: 50%;
+    }
+}
+.offcanvas-collapse.open {
+    visibility: visible;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.offcanvas-collapse .navbar-nav {
+    a {
+        font-size: 18px;
+    }
+}
+
+.offcanvas-collapse a {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: $main;
+        bottom: -5px;
+        left: 0;
+        transition: width 0.3s;
+    }
+    &:hover,
+    &.active {
+        color: $main;
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+.offcanvas-collapse .close-btn {
+    cursor: pointer;
+}
+

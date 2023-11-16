@@ -1,0 +1,473 @@
+.loading {
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    animation: opening 0.8s cubic-bezier(0.4, 0, 1, 1) 3s 1 both;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: $main;
+        animation: progessBar 3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+    }
+    img {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: logo 1.5s 1s 1 ease both;
+    }
+}
+
+@keyframes opening {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes progessBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes logo {
+    0% {
+        top: 60%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+.banner-carousel {
+    .owl-dots {
+        margin-top: 0;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        .owl-dot span {
+            background: #d9d9d9 !important;
+        }
+        .owl-dot.active span {
+            background: $main !important;
+        }
+    }
+}
+
+.quality-container {
+    margin-top: -6px;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    @include padding(74px, 0);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $main;
+        z-index: -1;
+        @include large {
+            width: 36%;
+        }
+    }
+    .content {
+        @include large {
+            margin-left: 4%;
+        }
+    }
+    .img-container {
+        text-align: center;
+        @include padding(0, 15px);
+        @include large {
+            text-align: initial;
+            padding: 0;
+        }
+    }
+    .intro {
+        @include large {
+            flex-grow: 1;
+        }
+    }
+
+    .title {
+        position: relative;
+        @include padding(18px, 15px);
+        @include large {
+            padding-top: 0;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #cccccc;
+        }
+        .eng-title {
+            font-family: Arial, Helvetica, sans-serif;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 25%));
+            margin-left: 0px;
+            font-size: 32px;
+            @include small {
+                font-size: 48px;
+            }
+            @include large {
+                margin-left: -120px;
+            }
+            span {
+                display: block;
+                margin-left: 105px;
+                @include small {
+                    margin-left: 120px;
+                }
+            }
+        }
+        .cn-title {
+            margin-left: -80px;
+            margin-top: 10px;
+            @include small {
+                margin-top: 20px;
+            }
+        }
+    }
+    .des {
+        @include padding(5%, 15%);
+        color: $white;
+        h3 {
+            @include large {
+                color: $dark-text;
+            }
+        }
+        p {
+            @include large {
+                color: $light-text;
+            }
+        }
+    }
+}
+
+.select-container {
+    background-size: cover;
+    background-position: top center;
+    padding-bottom: 30%;
+    @include small {
+        padding-bottom: 50%;
+    }
+    @include large {
+        padding-bottom: 30%;
+    }
+    .intro {
+        margin-top: 10%;
+        @include small {
+            margin-top: 5%;
+        }
+        h2 {
+            line-height: 1;
+        }
+    }
+    .eng-title {
+        font-family: Arial, Helvetica, sans-serif;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 25%));
+        font-size: 32px;
+        @include small {
+            font-size: 48px;
+        }
+    }
+    p {
+        line-height: 32px;
+        background-color: rgba(255, 255, 255, 80%);
+        @include small {
+            background-color: transparent;
+        }
+    }
+}
+
+.gr-block {
+    background-color: $main;
+    margin-top: -1px;
+    height: 40px;
+}
+
+.home-news-container {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    @include small {
+        padding-top: 80px;
+    }
+    .eng-title {
+        font-family: Arial, Helvetica, sans-serif;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 25%));
+        font-size: 32px;
+        @include small {
+            font-size: 48px;
+        }
+    }
+    .more-btn {
+        margin-top: 16px;
+        font-size: 14px;
+        @include padding(6px, 10px);
+        color: $white;
+        background-color: $main;
+        border-radius: 5px;
+        &:hover {
+            background-color: transparent;
+            outline: 1px solid $main;
+            color: $main;
+            transition: all 0.3s ease;
+        }
+        @include medium {
+            font-size: 16px;
+            @include padding(10px, 28px);
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            margin-top: 0;
+        }
+    }
+}
+
+.news-carousel {
+    .item {
+        border-radius: 5px;
+        overflow: hidden;
+        &:hover .img {
+            transform: scale(1.1);
+            transition: all 0.5s ease;
+        }
+    }
+    .img-container {
+        overflow: hidden;
+    }
+    .img {
+        padding-bottom: 65%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .content {
+        background-color: $white;
+        @include padding(16px, 20px);
+    }
+    p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .owl-stage {
+        display: flex;
+        .owl-item:first-child {
+            margin-left: 5px;
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        bottom: -55px;
+        left: 50%;
+        transform: translateX(-50%);
+        .owl-dot span {
+            background: #d9d9d9 !important;
+        }
+        .owl-dot.active span {
+            background: $main !important;
+        }
+    }
+    .owl-nav {
+        [class*="owl-"] {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+            font-size: 20px !important;
+        }
+        button.owl-prev {
+            left: -35px;
+        }
+        button.owl-next {
+            right: -35px;
+        }
+    }
+}
+
+.video-container {
+    position: relative;
+
+    padding-bottom: 60%;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.affiliated-container {
+    background-size: cover;
+    padding-top: 60px;
+    @include medium {
+        padding-top: 110px;
+    }
+    .content {
+        margin-bottom: 40px;
+        @include medium {
+            margin-bottom: 60px;
+        }
+    }
+    .eng-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 32px;
+        @include small {
+            font-size: 48px;
+        }
+        span {
+            display: block;
+            margin-left: 50px;
+        }
+    }
+    .cn-title {
+        @include small {
+            margin-left: -10px;
+            margin-top: 20px;
+        }
+    }
+    ul a {
+        cursor: pointer;
+    }
+}
+
+.project-text-container {
+    .eng-title {
+        line-height: 1;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 32px;
+        @include small {
+            font-size: 48px;
+        }
+    }
+    .cn-title {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .more-case-btn {
+        @include padding(6px, 10px);
+        color: $white;
+        background-color: $main;
+        border-radius: 5px;
+        font-size: 14px;
+        @include medium {
+            font-size: 16px;
+            @include padding(10px, 28px);
+        }
+        &:hover {
+            background-color: transparent;
+            outline: 1px solid $main;
+            color: $main;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.project-carousel {
+    .item {
+        position: relative;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-bottom: 130%;
+        width: 100%;
+
+        &:hover {
+            .overlay {
+                bottom: -100%;
+                transition: all 0.6s ease;
+            }
+            .circle {
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.6s ease;
+            }
+        }
+    }
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(24, 24, 24, 0.35);
+        @include padding(0, 15%);
+    }
+    h3 {
+        letter-spacing: 8px;
+    }
+    .circle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: -100%;
+    }
+    .circle-outline {
+        border-radius: 50%;
+        @include padding(5px, 5px);
+        border: 1px solid $sub;
+        background-color: transparent;
+    }
+    .circle-fill {
+        @include padding(8px, 12px);
+        background-color: $sub;
+        border-radius: 50%;
+        i {
+            color: $white;
+        }
+    }
+}
+
+footer {
+    margin-top: -5px;
+    padding-top: 35px;
+
+    background-color: $dark-text;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    .photonic {
+        opacity: 0.3;
+        @include large {
+            position: absolute;
+            right: 15px;
+            bottom: 1rem;
+        }
+    }
+}

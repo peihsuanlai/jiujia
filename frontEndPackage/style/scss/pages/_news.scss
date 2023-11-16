@@ -1,0 +1,45 @@
+.tabs {
+    padding: 0px 30px;
+}
+.tabs a {
+    min-width: 100px;
+    text-align: center;
+    padding: 8px 16px;
+    border: 1px solid #dedede;
+    color: #364664;
+    background-color: #ffffff;
+}
+.tabs a:hover,
+.tabs a.active {
+    color: #ffffff;
+    background-color: #364664;
+    border: 1px solid #364664;
+}
+.tabs .owl-nav {
+    font-size: 30px;
+}
+.tabs .owl-nav [class*="owl-"]:hover {
+    color: initial !important;
+    background-color: transparent !important;
+}
+
+.tabs .owl-nav [class*="owl-"]:focus {
+    outline: none;
+}
+
+.tabs .owl-nav button.owl-prev {
+    z-index: 1;
+    position: absolute;
+    left: 10px;
+    top: -5px;
+    margin: 0px;
+    background: transparent !important;
+}
+.tabs .owl-nav button.owl-next {
+    z-index: 1;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    margin: 0px;
+    background: transparent !important;
+}

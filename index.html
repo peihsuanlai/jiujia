@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 共用區塊 -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./frontEndPackage/bootstrap-icons/bootstrap-icons.css" />
+
+        <!-- 特定 -->
+        <link rel="stylesheet" href="./frontEndPackage/owlcarousel/owl.carousel.min.css" />
+        <link rel="stylesheet" href="./frontEndPackage/owlcarousel/owl.theme.default.min.css" />
+
+        <link rel="stylesheet" href="./frontEndPackage/style/all.css" />
+        <title>久佳營造</title>
+    </head>
+    <body>
+        <div style="background-image: url('./frontEndPackage/images/quality-bg.png')" class="loading">
+            <img src="./frontEndPackage/images/color-logo.png" alt="" />
+        </div>
+        <section class="banner-carousel owl-carousel owl-theme">
+            <a class="item" href="###">
+                <img src="./frontEndPackage/images/home-banner.png" alt="banner" />
+            </a>
+            <a class="item" href="###">
+                <img src="./frontEndPackage/images/home-banner.png" alt="banner" />
+            </a>
+        </section>
+
+        <section id="home-nav-container" class="home-nav">
+            <nav class="container-fluid navbar p-0 align-items-center">
+                <h1 class="mb-0">
+                    <a
+                        class="logo white-logo"
+                        href="/"
+                        style="background-image: url('./frontEndPackage/images/white-logo.png')"
+                        >久佳營造</a
+                    >
+                    <a
+                        class="logo color-logo d-none"
+                        href="/"
+                        style="background-image: url('./frontEndPackage/images/color-logo.png')"
+                        >久佳營造</a
+                    >
+                </h1>
+                <button class="menu-btn d-flex flex-column align-items-center" type="button" data-toggle="offcanvas">
+                    <i class="bi bi-list menu-icon text-white"></i>
+                    <p class="mb-0 text-white menu-text">MENU</p>
+                </button>
+                <div class="navbar-collapse offcanvas-collapse mobile-menu d-flex flex-column" id="mobile-menu">
+                    <a class="close-btn ml-auto mt-3 text-main" data-toggle="offcanvas"><i class="bi bi-x-lg"></i></a>
+                    <ul class="navbar-nav mt-3">
+                        <li class="nav-item mb-4">
+                            <a
+                                class="position-relative nav-link text-main d-flex justify-content-between py-0"
+                                id="nav-about"
+                                href="###"
+                                ><span class="mr-2">ABOUT US</span>關於我們</a
+                            >
+                        </li>
+                        <li class="nav-item mb-4">
+                            <a
+                                class="position-relative nav-link text-main d-flex justify-content-between py-0"
+                                id="nav-case"
+                                href="###"
+                                ><span class="mr-2">PROJECTS</span>工程實績</a
+                            >
+                        </li>
+                        <li class="nav-item mb-4">
+                            <a
+                                class="position-relative nav-link text-main d-flex justify-content-between py-0"
+                                id="nav-news"
+                                href="###"
+                                ><span class="mr-2">NEWS & EVENTS</span>最新消息</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="position-relative nav-link text-main d-flex justify-content-between mb-4 py-0"
+                                id="nav-contact"
+                                href="###"
+                                ><span class="mr-2">CONTACT US</span>聯絡我們</a
+                            >
+                        </li>
+                    </ul>
+                    <div class="img-container">
+                        <img src="./frontEndPackage/images/color-logo.png" alt="" />
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <section style="background-image: url('./frontEndPackage/images/quality-bg.png')" class="quality-container">
+            <div class="content d-flex flex-column flex-lg-row align-items-lg-center">
+                <div class="img-container">
+                    <img src="./frontEndPackage/images/quality.png" alt="" />
+                </div>
+                <div class="intro flex-grow-1">
+                    <div class="title d-flex justify-content-center justify-content-lg-start">
+                        <h2 class="mb-0 eng-title text-white font-weight-bold">QUALITY<span>POLICY</span></h2>
+                        <h2 class="mb-0 cn-title fs-20 text-darkBlack">品質政策</h2>
+                    </div>
+                    <div class="des">
+                        <h3 class="mb-18 fs-24">堅持、追求卓越</h3>
+                        <p class="mb-0">
+                            透過品管、內部稽核、專任工程人員檢核、縣府查核等，持續精進施工品質。<br /><br />經由自主內部人員教育訓練、其他工程觀摩，提升人員素養、使每一次的工程育臻完美。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            style="background-image: url('./frontEndPackage/images/selectUs.png')"
+            class="select-container d-flex justify-content-center"
+        >
+            <div class="intro container d-flex flex-column align-items-center">
+                <div class="title mb-20">
+                    <h2 class="cn-title fs-20 text-darkBlack">建築堅持</h2>
+                    <h2 class="mb-0 eng-title text-white font-weight-bold">WHY SELECT US</h2>
+                </div>
+                <div class="des text-center">
+                    <h3 class="fs-24 text-darkBlack mb-3">精進施工作業</h3>
+                    <p class="mb-0">
+                        包含BIM套圖、混凝土澆置配置最佳化、與骨櫃廠商完美合作。<br />
+                        落實經驗傳承、持續回饋至未來工地，讓這塊土地更有一致性、更完美。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="gr-block d-none d-md-block"></div>
+
+        <section style="background-image: url('./frontEndPackage/images/quality-bg.png')" class="home-news-container">
+            <div class="container">
+                <div class="position-relative text-center mb-30">
+                    <h2 class="eng-title text-white font-weight-bold">NEWS & EVENTS</h2>
+                    <h2 class="cn-title fs-20 text-darkBlack mb-0">最新消息</h2>
+                    <a href="###" class="more-btn">更多內容</a>
+                </div>
+                <div class="news-carousel owl-carousel owl-theme">
+                    <a href="###" class="item d-flex flex-column h-100">
+                        <div class="img-container">
+                            <div class="img" style="background-image: url('./frontEndPackage/images/news.png')"></div>
+                        </div>
+                        <div class="content flex-grow-1">
+                            <span class="text-sub">2023.10.12</span>
+                            <p class="mb-0 text-darkBlack">第22屆公共工程金質獎-建築工程類特優</p>
+                        </div>
+                    </a>
+                    <a href="###" class="item d-flex flex-column h-100">
+                        <div class="img-container">
+                            <div class="img" style="background-image: url('./frontEndPackage/images/news.png')"></div>
+                        </div>
+                        <div class="content flex-grow-1">
+                            <span class="text-sub">2023.10.12</span>
+                            <p class="mb-0 text-darkBlack">
+                                第22屆公共工程金質獎-建築工程類特優第22屆公共工程金質獎-建築工程類特優第22屆公共工程金質特優第22屆公共工程金質
+                            </p>
+                        </div>
+                    </a>
+                    <a href="###" class="item d-flex flex-column h-100">
+                        <div class="img-container">
+                            <div class="img" style="background-image: url('./frontEndPackage/images/news.png')"></div>
+                        </div>
+                        <div class="content flex-grow-1">
+                            <span class="text-sub">2023.10.12</span>
+                            <p class="mb-0 text-darkBlack">第22屆公共工程金質獎-建築工程類特優</p>
+                        </div>
+                    </a>
+                    <a href="###" class="item d-flex flex-column h-100">
+                        <div class="img-container">
+                            <div class="img" style="background-image: url('./frontEndPackage/images/news.png')"></div>
+                        </div>
+                        <div class="content flex-grow-1">
+                            <span class="text-sub">2023.10.12</span>
+                            <p class="mb-0 text-darkBlack">第22屆公共工程金質獎-建築工程類特優</p>
+                        </div>
+                    </a>
+                    <a href="###" class="item d-flex flex-column h-100">
+                        <div class="img-container">
+                            <div class="img" style="background-image: url('./frontEndPackage/images/news.png')"></div>
+                        </div>
+                        <div class="content flex-grow-1">
+                            <span class="text-sub">2023.10.12</span>
+                            <p class="mb-0 text-darkBlack">第22屆公共工程金質獎-建築工程類特優</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-container">
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Eu7HPeNN6Fg?si=6eDgFqkJz9VPlNjb&amp;controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+            ></iframe>
+        </section>
+
+        <section
+            class="affiliated-container"
+            style="background-image: url('./frontEndPackage/images/affiliated-bg.png')"
+        >
+            <div class="container d-flex flex-column align-items-center content">
+                <div class="d-flex flex-column flex-sm-row">
+                    <h2 class="mb-0 eng-title font-weight-bold text-darkBlack">AFFILIATED<span>COMPANIES</span></h2>
+                    <h2 class="mb-0 cn-title fs-20 text-darkBlack text-center text-sm-left">關係企業</h2>
+                </div>
+                <ul class="list-unstyled d-flex mb-0">
+                    <li>
+                        <a data-toggle="modal" data-target="#affiliated-1"
+                            ><img src="./frontEndPackage/images/綠佳營造logo.png" alt="綠佳營造"
+                        /></a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#affiliated-2"
+                            ><img src="./frontEndPackage/images/唐美建設logo.png" alt="唐美建設"
+                        /></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container d-flex justify-content-between align-items-end project-text-container pb-4">
+                <div class="title">
+                    <h2 class="cn-title fs-20 text-darkBlack mb-1">工程實績</h2>
+                    <h2 class="eng-title font-weight-bold text-darkBlack mb-0">PROJECTS</h2>
+                </div>
+                <a href="###" class="more-case-btn">更多精選案例</a>
+            </div>
+        </section>
+
+        <!-- modal  -->
+
+        <div
+            class="modal fade"
+            id="affiliated-1"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="affiliated-1"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="affiliated-1">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">...</div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="affiliated-2"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="affiliated-2-title"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="affiliated-2-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">...</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="project-carousel owl-carousel owl-theme">
+            <a class="item" href="###" style="background-image: url('./frontEndPackage/images/case.png')">
+                <div class="overlay">
+                    <h3 class="mb-0 fs-16 text-white">108松江和裕辦公大樓</h3>
+                </div>
+                <div class="circle">
+                    <span class="circle-outline">
+                        <span class="circle-fill">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </span>
+                </div>
+            </a>
+            <a class="item" href="###" style="background-image: url('./frontEndPackage/images/case.png')">
+                <div class="overlay">
+                    <h3 class="mb-0 fs-16 text-white">108松江和裕辦公大樓</h3>
+                </div>
+                <div class="circle">
+                    <span class="circle-outline">
+                        <span class="circle-fill">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </span>
+                </div>
+            </a>
+            <a class="item" href="###" style="background-image: url('./frontEndPackage/images/case.png')">
+                <div class="overlay">
+                    <h3 class="mb-0 fs-16 text-white">108松江和裕辦公大樓</h3>
+                </div>
+                <div class="circle">
+                    <span class="circle-outline">
+                        <span class="circle-fill">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </span>
+                </div>
+            </a>
+            <a class="item" href="###" style="background-image: url('./frontEndPackage/images/case.png')">
+                <div class="overlay">
+                    <h3 class="mb-0 fs-16 text-white">108松江和裕辦公大樓</h3>
+                </div>
+                <div class="circle">
+                    <span class="circle-outline">
+                        <span class="circle-fill">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </span>
+                </div>
+            </a>
+            <a class="item" href="###" style="background-image: url('./frontEndPackage/images/case.png')">
+                <div class="overlay">
+                    <h3 class="mb-0 fs-16 text-white">108松江和裕辦公大樓</h3>
+                </div>
+                <div class="circle">
+                    <span class="circle-outline">
+                        <span class="circle-fill">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </span>
+                </div>
+            </a>
+            <a class="item" href="###" style="background-image: url('./frontEndPackage/images/case.png')">
+                <div class="overlay">
+                    <h3 class="mb-0 fs-16 text-white">108松江和裕辦公大樓</h3>
+                </div>
+                <div class="circle">
+                    <span class="circle-outline">
+                        <span class="circle-fill">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </span>
+                </div>
+            </a>
+        </section>
+
+        <footer style="background-image: url('./frontEndPackage/images/footer-building.png')">
+            <div class="container text-center d-flex flex-column">
+                <div class="mb-3">
+                    <img src="./frontEndPackage/images/logo-sm.png" alt="" />
+                </div>
+
+                <div class="text-white">
+                    <p>地址&nbsp&nbsp台北市內湖區陽光街381號6樓</p>
+                    <ul class="list-unstyled">
+                        <li>Tel&nbsp&nbsp<a href="tel:+886-2-2659-8049" class="text-white">02-2659-8049</a></li>
+                        <li>Mail&nbsp&nbsp<a href="mailto:ru3ru8@gmail.com" class="text-white"></a>ru3ru8@gmail.com</li>
+                    </ul>
+                </div>
+                <p class="text-white">Copyright © 久佳營造. All rights reserved.</p>
+            </div>
+
+            <ul class="photonic d-flex list-unstyled justify-content-center mb-0 pb-1 text-white">
+                傳訊光科技:&nbsp
+                <li>
+                    <a target="_blank" href="https://shop.photonic.com.tw/" target="_blank" class="text-white"
+                        >購物車&nbsp</a
+                    >/&nbsp
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.photonic.com.tw/" target="_blank" class="text-white"
+                        >網頁設計&nbsp</a
+                    >/&nbsp
+                </li>
+                <li>
+                    <a target="_blank" href="http://erp2000.com/" target="_blank" class="text-white">CRM</a>
+                </li>
+            </ul>
+        </footer>
+
+        <!-- 共用區塊 -->
+        <script src="./frontEndPackage/js/jquery.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+            crossorigin="anonymous"
+        ></script>
+        <!-- 特定 -->
+        <script src="./frontEndPackage/owlcarousel/owl.carousel.min.js"></script>
+        <script src="./frontEndPackage/js/all.js"></script>
+   
+        <script>
+            $(function () {
+                // menu switch
+                $('[data-toggle="offcanvas"]').on("click", function () {
+                    $(".offcanvas-collapse").toggleClass("open");
+                });
+                //大圖輪播
+                $(".banner-carousel").owlCarousel({
+                    loop: true,
+                    autoplay: true,
+                    items: 1,
+                    autoplayTimeout: 2000,
+                    autoplayHoverPause: true,
+                    dots: true,
+                    nav: false,
+                });
+                //navbar滑動換樣式
+                $(window).on("scroll", function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > 200) {
+                        $("#home-nav-container").addClass("navbar-bgWhite");
+                        $(".white-logo").addClass("d-none");
+                        $(".color-logo").removeClass("d-none");
+                    } else {
+                        $("#home-nav-container").removeClass("navbar-bgWhite");
+                        $(".white-logo").removeClass("d-none");
+                        $(".color-logo").addClass("d-none");
+                    }
+                });
+                //最新消息輪播
+                $(".news-carousel").owlCarousel({
+                    loop: true,
+                    autoplay: true,
+                    margin: 20,
+                    autoplayTimeout: 2000,
+                    autoplayHoverPause: true,
+                    dots: true,
+                    nav: true,
+                    navText: ["<i class='bi bi-chevron-left'></i>", "<i class='bi bi-chevron-right'></i>"],
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: false,
+                        },
+                        576: {
+                            items: 2,
+                            nav: true,
+                        },
+                        992: {
+                            items: 3,
+                            nav: true,
+                        },
+                    },
+                });
+                //工程輪播
+                $(".project-carousel").owlCarousel({
+                    loop: true,
+                    autoplay: true,
+                    autoplayTimeout: 2000,
+                    autoplayHoverPause: true,
+                    dots: false,
+                    nav: false,
+                    margin: 0,
+                    responsive: {
+                        0: {
+                            items: 2,
+                            center: true,
+                        },
+                        576: {
+                            items: 4,
+                            center: true,
+                        },
+                        992: {
+                            items: 6,
+                        },
+                    },
+                });
+            });
+        </script>
+    </body>
+</html>
