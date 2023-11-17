@@ -35,7 +35,7 @@
     >
       <div class="title text-center text-white">
         <h3 class="font-weight-bold">NEWS & EVENTS</h3>
-        <h3 class="fs-24">最新消息</h3>
+        <h3 class="mb-0">最新消息</h3>
       </div>
     </section>
 
@@ -119,11 +119,10 @@
       style="background-image: url('./frontEndPackage/images/quality-bg.png')"
     >
       <section
-        class="container breadcrumb-container"
-        style="background-color: url('./frontEndPackage/images/quality-bg.png')"
+        class="container"
       >
         <nav aria-label="breadcrumb" class="mb-32 pt-3">
-          <ol class="breadcrumb justify-content-end p-0 mb-0">
+          <ol class="breadcrumb justify-content-end p-0 mb-0 fs-14">
             <li class="breadcrumb-item"><a href="/">首頁</a></li>
             <li class="breadcrumb-item" aria-current="page">最新消息</li>
           </ol>
@@ -287,9 +286,9 @@
       "
     >
       <div class="container text-center d-flex flex-column">
-        <div class="mb-3">
+        <a class="mb-3" href="/">
           <img src="./frontEndPackage/images/logo-sm.png" alt="" />
-        </div>
+        </a>
 
         <div class="text-white">
           <p>地址&nbsp&nbsp台北市內湖區陽光街381號6樓</p>
@@ -312,7 +311,7 @@
       </div>
 
       <ul
-        class="photonic d-flex list-unstyled justify-content-center mb-0 pb-1 text-white"
+        class="photonic d-flex list-unstyled justify-content-center mb-0 pb-2 pb-lg-0 text-white"
       >
         傳訊光科技:&nbsp
         <li>
@@ -362,25 +361,6 @@
     <script src="./frontEndPackage/js/all.js"></script>
     <script>
       $(function () {
-        // menu switch
-        $('[data-toggle="offcanvas"]').on("click", function () {
-          $(".offcanvas-collapse").toggleClass("open");
-        });
-
-        //navbar滑動換樣式
-        $(window).on("scroll", function () {
-          var scrollTop = $(window).scrollTop();
-          if (scrollTop > 200) {
-            $("#home-nav-container").addClass("navbar-bgWhite");
-            $(".white-logo").addClass("d-none");
-            $(".color-logo").removeClass("d-none");
-          } else {
-            $("#home-nav-container").removeClass("navbar-bgWhite");
-            $(".white-logo").removeClass("d-none");
-            $(".color-logo").addClass("d-none");
-          }
-        });
-
         //頁籤輪播
         $(".tab-carousel").owlCarousel({
           loop: false,

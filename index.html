@@ -15,13 +15,15 @@
         <!-- 特定 -->
         <link rel="stylesheet" href="./frontEndPackage/owlcarousel/owl.carousel.min.css" />
         <link rel="stylesheet" href="./frontEndPackage/owlcarousel/owl.theme.default.min.css" />
+        <link rel="stylesheet" href="./frontEndPackage/aos/aos.css" />
 
         <link rel="stylesheet" href="./frontEndPackage/style/all.css" />
         <title>久佳營造</title>
     </head>
     <body>
-        <div style="background-image: url('./frontEndPackage/images/quality-bg.png')" class="loading">
+        <div style="background-image: url('./frontEndPackage/images/quality-bg.png')" class="loadingArea">
             <img src="./frontEndPackage/images/color-logo.png" alt="" />
+            <!-- <lottie-player id="logoLoading" src="./frontEndPackage/images/久佳營造-Logo-主-02.json" background="transparent" speed="1" style="width:     300px; height: 300px;" autoplay disableCheck></lottie-player> -->
         </div>
         <section class="banner-carousel owl-carousel owl-theme">
             <a class="item" href="###">
@@ -96,11 +98,11 @@
         </section>
 
         <section style="background-image: url('./frontEndPackage/images/quality-bg.png')" class="quality-container">
-            <div class="content d-flex flex-column flex-lg-row align-items-lg-center">
-                <div class="img-container">
+            <div class="content d-flex flex-column flex-lg-row align-items-lg-center"  >
+                <div class="img-container" data-aos="fade-right">
                     <img src="./frontEndPackage/images/quality.png" alt="" />
                 </div>
-                <div class="intro flex-grow-1">
+                <div class="intro flex-grow-1" data-aos="fade-left">
                     <div class="title d-flex justify-content-center justify-content-lg-start">
                         <h2 class="mb-0 eng-title text-white font-weight-bold">QUALITY<span>POLICY</span></h2>
                         <h2 class="mb-0 cn-title fs-20 text-darkBlack">品質政策</h2>
@@ -119,7 +121,7 @@
             style="background-image: url('./frontEndPackage/images/selectUs.png')"
             class="select-container d-flex justify-content-center"
         >
-            <div class="intro container d-flex flex-column align-items-center">
+            <div class="intro container d-flex flex-column align-items-center" data-aos="fade-up">
                 <div class="title mb-20">
                     <h2 class="cn-title fs-20 text-darkBlack">建築堅持</h2>
                     <h2 class="mb-0 eng-title text-white font-weight-bold">WHY SELECT US</h2>
@@ -136,8 +138,8 @@
 
         <div class="gr-block d-none d-md-block"></div>
 
-        <section style="background-image: url('./frontEndPackage/images/quality-bg.png')" class="home-news-container">
-            <div class="container">
+        <section style="background-image: url('./frontEndPackage/images/quality-bg.png')" class="home-news-container" >
+            <div class="container" data-aos="fade-up">
                 <div class="position-relative text-center mb-30">
                     <h2 class="eng-title text-white font-weight-bold">NEWS & EVENTS</h2>
                     <h2 class="cn-title fs-20 text-darkBlack mb-0">最新消息</h2>
@@ -195,7 +197,7 @@
             </div>
         </section>
 
-        <section class="video-container">
+        <section class="video-container" data-aos="zoom-in">
             <iframe
                 width="560"
                 height="315"
@@ -211,7 +213,7 @@
             class="affiliated-container"
             style="background-image: url('./frontEndPackage/images/affiliated-bg.png')"
         >
-            <div class="container d-flex flex-column align-items-center content">
+            <div class="container d-flex flex-column align-items-center content" data-aos="zoom-in">
                 <div class="d-flex flex-column flex-sm-row">
                     <h2 class="mb-0 eng-title font-weight-bold text-darkBlack">AFFILIATED<span>COMPANIES</span></h2>
                     <h2 class="mb-0 cn-title fs-20 text-darkBlack text-center text-sm-left">關係企業</h2>
@@ -282,7 +284,7 @@
             </div>
         </div>
 
-        <section class="project-carousel owl-carousel owl-theme">
+        <section class="project-carousel owl-carousel owl-theme" data-aos="fade-left">
             <a class="item" href="###" style="background-image: url('./frontEndPackage/images/case.png')">
                 <div class="overlay">
                     <h3 class="mb-0 fs-16 text-white">108松江和裕辦公大樓</h3>
@@ -359,9 +361,9 @@
 
         <footer style="background-image: url('./frontEndPackage/images/footer-building.png')">
             <div class="container text-center d-flex flex-column">
-                <div class="mb-3">
+                <a class="mb-3" href="/">
                     <img src="./frontEndPackage/images/logo-sm.png" alt="" />
-                </div>
+                </a>
 
                 <div class="text-white">
                     <p>地址&nbsp&nbsp台北市內湖區陽光街381號6樓</p>
@@ -405,14 +407,46 @@
         ></script>
         <!-- 特定 -->
         <script src="./frontEndPackage/owlcarousel/owl.carousel.min.js"></script>
+        <script src="./frontEndPackage/aos/aos.js"></script>
         <script src="./frontEndPackage/js/all.js"></script>
-   
+
+        <script>
+            let loadingData = sessionStorage.getItem("loading");
+            (function () {
+                $(".loadingArea").addClass("show");
+                setTimeout(function () {
+                    $(".loadingArea").addClass("show");
+                }, 500);
+
+                if (loadingData !== "ok") {
+                    sessionStorage.setItem("loading", "ok");
+
+                    setTimeout(function () {
+                        $(".loadingArea").fadeOut();
+                    }, 3000);
+
+                    setTimeout(function () {
+                        $(".loadingArea").remove();
+                    }, 3200);
+                } else {
+                    $(".loadingArea").addClass("hide").remove();
+                }
+            })();
+        </script>
+
+        <script>
+            AOS.init({
+                offset: 240,
+                easing: 'ease-in-sine',
+                duration: 1000,
+                once:false,
+                delay:100,
+                }
+            );
+        </script>
+        
         <script>
             $(function () {
-                // menu switch
-                $('[data-toggle="offcanvas"]').on("click", function () {
-                    $(".offcanvas-collapse").toggleClass("open");
-                });
                 //大圖輪播
                 $(".banner-carousel").owlCarousel({
                     loop: true,
@@ -422,19 +456,6 @@
                     autoplayHoverPause: true,
                     dots: true,
                     nav: false,
-                });
-                //navbar滑動換樣式
-                $(window).on("scroll", function () {
-                    var scrollTop = $(window).scrollTop();
-                    if (scrollTop > 200) {
-                        $("#home-nav-container").addClass("navbar-bgWhite");
-                        $(".white-logo").addClass("d-none");
-                        $(".color-logo").removeClass("d-none");
-                    } else {
-                        $("#home-nav-container").removeClass("navbar-bgWhite");
-                        $(".white-logo").removeClass("d-none");
-                        $(".color-logo").addClass("d-none");
-                    }
                 });
                 //最新消息輪播
                 $(".news-carousel").owlCarousel({

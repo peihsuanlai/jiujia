@@ -1,157 +1,194 @@
-.news-banner {
-  background-repeat: no-repeat;
-  padding-bottom: 30%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  .title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
-    :first-child {
-      font-family: Arial, Helvetica, sans-serif;
-      filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 15%));
-      @include large {
-        font-size: 48px;
-      }
+.news-banner, .contact-banner {
+    background-repeat: no-repeat;
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @include xsmall {
+        padding-bottom: 50%;
     }
-  }
+    @include small {
+        padding-bottom: 40%;
+    }
+    @include medium {
+        padding-bottom: 30%;
+    }
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+
+        :first-child {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 15%));
+            white-space: nowrap;
+            @include large {
+                font-size: 48px;
+            }
+        }
+        :last-child {
+            font-size: 20px;
+        }
+        @include large {
+            font-size: 24px;
+        }
+    }
 }
 
-.breadcrumb-container{
-  .breadcrumb {
-    background-color: transparent;
-    a {
-      color: $dark-text;
+    .breadcrumb {
+        background-color: transparent;
+        a {
+            color: $dark-text;
+        }
     }
-  }
-}
+
 
 .tabs {
     padding: 0px 30px;
-    .owl-item + .owl-item li:before {
+    .owl-item + .owl-item li::before {
         content: "";
         display: inline-block;
         width: 1px;
         height: 16px;
         background-color: $dark-text;
-      }
-      a {
+    }
+    a {
         //min-width: 100px;
-       //text-align: center;
-       position:relative;
-       padding: 8px 16px;
-       color: $light-text;
-       &:hover {
-         color: $main;
-       }
-       &.active:after {
-         content: "";
-         position:absolute;
-         width: 80%;
-         height:3px;
-         background-color:$main;
-         bottom:0;
-         right:0;
-         left:0;
-         margin: auto;
-     
-       }
-     }
-     .owl-nav {
+        //text-align: center;
+        position: relative;
+        padding: 8px 16px;
+        color: $light-text;
+        &:hover {
+            color: $main;
+        }
+        &.active::after {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 3px;
+            background-color: $main;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+    }
+    .owl-nav {
         font-size: 30px;
         [class*="owl-"]:hover {
             color: initial !important;
             background-color: transparent !important;
-          }
-          [class*="owl-"]:focus {
+        }
+        [class*="owl-"]:focus {
             outline: none;
-          }
-          button.owl-prev {
+        }
+        button.owl-prev {
             z-index: 1;
             position: absolute;
             left: 10px;
             top: -5px;
             margin: 0px;
             background: transparent !important;
-          }
-          button.owl-next {
+        }
+        button.owl-next {
             z-index: 1;
             position: absolute;
             right: 10px;
             top: -5px;
             margin: 0px;
             background: transparent !important;
-          }
-          
-      }
+        }
+    }
 }
 
-hr{
-    margin-top:0;
-    margin-bottom:48px;
+hr {
+    margin-top: 0;
+    margin-bottom: 48px;
 }
 
 .news-container {
-    margin-bottom:60px;
-    & > div{
+    margin-bottom: 60px;
+    & > div {
         row-gap: 40px;
     }
-    a{
-        border-radius:5px;
+    a {
+        border-radius: 5px;
         overflow: hidden;
-        &:hover .overlay{
-            height:100%;
-            opacity:1;
+        &:hover .overlay {
+            height: 100%;
+            opacity: 1;
         }
     }
-    .overlay{
-        position:absolute;
-        top:0;
-        left:0;
-        opacity:0;
-        width:100%;
-        height:0%;
-        background-color:#008E6A66;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 0%;
+        background-color: #008e6a66;
         transition: all 0.4s ease-in-out;
-        span{
+        span {
             @include padding(20px, 10px);
-            border-radius:50%;
+            border-radius: 50%;
             background-color: $main;
         }
     }
-    .img{
-        background-repeat:no-repeat;
-        background-size:cover;
-        background-position:center;
-        padding-bottom:70%;
+    .img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-bottom: 70%;
     }
-    .content{
+    .content {
         background-color: $white;
         @include padding(16px, 20px);
+        p {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
     }
 }
 
-
-.paginition{
-    a{
-        color:$light-text;
+.paginition {
+    a {
+        color: $light-text;
     }
-    li:not(:last-child){
-        margin-right:12px;
-        a{
-            width:36px;
-            height:36px;
-            text-align:center;
-            line-height:36px;
-            color:#cccccc;
+    li:not(:last-child) {
+        margin-right: 12px;
+        a {
+            width: 36px;
+            height: 36px;
+            text-align: center;
+            line-height: 36px;
+            color: #cccccc;
             background-color: #ffffff;
-            &.active, &:hover{
-                color:#ffffff;
+            &.active,
+            &:hover {
+                color: #ffffff;
                 background-color: $main;
             }
         }
     }
-   
+}
+
+
+.news-info-paginition{
+    a {
+        color: $light-text;
+        &:hover{
+            color: $main;
+        }
+    }
+    li:not(:last-child) {
+        margin-right: 12px;
+    }
+    i{
+        vertical-align:bottom;
+    }
 }

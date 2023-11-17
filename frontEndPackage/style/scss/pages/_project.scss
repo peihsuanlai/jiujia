@@ -1,0 +1,49 @@
+.project-container{
+    padding-top:58px;
+    @include small{
+        padding-top:70px; 
+    }
+    @include large{
+        padding-top:75px; 
+    }
+}
+.project-tabs {
+    padding: 0px 30px;
+    a {
+        min-width: 100px;
+        text-align: center;
+        padding: 8px 16px;
+        color: $dark-text;
+        &:hover,
+        &.active {
+            color: $white;
+            background-color: $dark-text;
+        }
+    }
+    .owl-nav {
+        font-size: 30px;
+        [class*="owl-"]:hover {
+            color: initial !important;
+            background-color: transparent !important;
+        }
+        [class*="owl-"]:focus {
+            outline: none;
+        }
+        button.owl-prev {
+            z-index: 1;
+            position: absolute;
+            left: 10px;
+            top: -5px;
+            margin: 0px;
+            background: transparent !important;
+        }
+        button.owl-next {
+            z-index: 1;
+            position: absolute;
+            right: 10px;
+            top: -5px;
+            margin: 0px;
+            background: transparent !important;
+        }
+    }
+}

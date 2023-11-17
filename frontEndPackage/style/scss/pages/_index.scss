@@ -1,4 +1,4 @@
-.loading {
+.loadingArea {
     position: fixed;
     pointer-events: none;
     top: 0;
@@ -6,7 +6,7 @@
     width: 100%;
     height: 100vh;
     z-index: 10;
-    animation: opening 0.8s cubic-bezier(0.4, 0, 1, 1) 3s 1 both;
+    //animation: opening 0.8s cubic-bezier(0.4, 0, 1, 1) 3s 1 both;
     &::before {
         position: absolute;
         content: "";
@@ -22,18 +22,25 @@
         top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
-        animation: logo 1.5s 1s 1 ease both;
+        animation: logo 1.5s ease 1.5s 1 both;
     }
 }
 
-@keyframes opening {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+.loadingArea.show {
+    opacity: 1;
 }
+
+// .loadingArea.hide {
+//     opacity: 0
+// }
+// @keyframes opening {
+//     0% {
+//         opacity: 1;
+//     }
+//     100% {
+//         opacity: 0;
+//     }
+// }
 
 @keyframes progessBar {
     0% {

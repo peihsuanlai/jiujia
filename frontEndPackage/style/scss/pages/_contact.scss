@@ -1,0 +1,121 @@
+.form-container{
+    padding-left:30px;
+    margin-bottom:40px;
+    @include small{
+        padding-left:15px;
+    }
+    @include medium{
+        margin-bottom:60px;
+    }
+}
+.contact-form{
+    label{
+        min-width: 65px;
+        
+        &[for="name"]::before,&[for="type"]::before,&[for="phone"]::before,&[for="verification"]::before{
+            position:absolute;
+            content:"*";
+            color:#E73429;
+            top:0;
+            left:-10px;
+           
+        }
+    }
+    .btns{
+        button{
+            @include padding(8px,16px);
+            border-radius: 5px;
+            color:$white;
+            border:none;
+            @include large{
+                @include padding(12px,45px);
+            }
+        }
+      
+        :first-child{
+            background-color:$main;
+            &:hover{
+                transition: all 0.3s ease-in-out;
+                outline:1px solid $main;
+                color:$main;
+                background-color:transparent;
+            }
+        }
+        :last-child{
+            background-color:$dark-text;
+            &:hover{
+                transition: all 0.3s ease-in-out;
+                outline:1px solid $dark-text;
+                color:$dark-text;
+                background-color:transparent;
+            }
+        }
+
+    }
+}
+
+.verificationBox{
+    margin-bottom:30px;
+    @include medium{
+        margin-bottom:48px;
+    }
+}
+.cerify-code-panel {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+     justify-content:flex-end;
+     flex-wrap:wrap;
+    .verify-code {
+        margin-bottom: 0;
+        border: 0;
+        width: 50% !important;
+        margin-bottom: 16px;
+        @include large{
+            width: 25% !important;
+            margin-bottom: 0px;
+        }
+    }
+    .verify-code-area {
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        @include large{
+            width: 50% !important;
+        }
+        .verify-input-area {
+            flex-grow: 1;
+            height: 100%;
+        }
+    }
+    .varify-input-code {
+        height: 100%;
+        padding: 4px;
+        width: 100%;
+    }
+    .verify-change-code {
+        color: red;
+    }
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 50%;
+    @include medium{
+        padding-bottom: 35%;
+    }
+    @include large{
+        padding-bottom: 25%;
+    }
+}
+
+
+.map-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+

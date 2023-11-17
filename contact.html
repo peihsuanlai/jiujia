@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 共用區塊 -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./frontEndPackage/bootstrap-icons/bootstrap-icons.css" />
+
+        <!-- 特定 -->
+        <link rel="stylesheet" href="./frontEndPackage/validation/verify_verify.css" />
+
+        <link rel="stylesheet" href="./frontEndPackage/style/all.css" />
+        <title>聯絡我們</title>
+    </head>
+    <body>
+        <section class="contact-banner" style="background-image: url('./frontEndPackage/images/contact-banner.png')">
+            <div class="title text-center text-white">
+                <h3 class="font-weight-bold">CONTACT US</h3>
+                <h3 class="mb-0">聯絡我們</h3>
+            </div>
+        </section>
+
+        <section id="home-nav-container" class="home-nav">
+            <nav class="container-fluid navbar p-0 align-items-center">
+                <h1 class="mb-0">
+                    <a
+                        class="logo white-logo"
+                        href="/"
+                        style="background-image: url('./frontEndPackage/images/white-logo.png')"
+                        >久佳營造</a
+                    >
+                    <a
+                        class="logo color-logo d-none"
+                        href="/"
+                        style="background-image: url('./frontEndPackage/images/color-logo.png')"
+                        >久佳營造</a
+                    >
+                </h1>
+                <button class="menu-btn d-flex flex-column align-items-center" type="button" data-toggle="offcanvas">
+                    <i class="bi bi-list menu-icon text-white"></i>
+                    <p class="mb-0 text-white menu-text">MENU</p>
+                </button>
+                <div class="navbar-collapse offcanvas-collapse mobile-menu d-flex flex-column" id="mobile-menu">
+                    <a class="close-btn ml-auto mt-3 text-main" data-toggle="offcanvas"><i class="bi bi-x-lg"></i></a>
+                    <ul class="navbar-nav mt-3">
+                        <li class="nav-item mb-4">
+                            <a
+                                class="position-relative nav-link text-main d-flex justify-content-between py-0"
+                                id="nav-about"
+                                href="###"
+                                ><span class="mr-2">ABOUT US</span>關於我們</a
+                            >
+                        </li>
+                        <li class="nav-item mb-4">
+                            <a
+                                class="position-relative nav-link text-main d-flex justify-content-between py-0"
+                                id="nav-case"
+                                href="###"
+                                ><span class="mr-2">PROJECTS</span>工程實績</a
+                            >
+                        </li>
+                        <li class="nav-item mb-4">
+                            <a
+                                class="position-relative nav-link text-main d-flex justify-content-between py-0"
+                                id="nav-news"
+                                href="###"
+                                ><span class="mr-2">NEWS & EVENTS</span>最新消息</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="position-relative nav-link text-main d-flex justify-content-between mb-4 py-0"
+                                id="nav-contact"
+                                href="###"
+                                ><span class="mr-2">CONTACT US</span>聯絡我們</a
+                            >
+                        </li>
+                    </ul>
+                    <div class="img-container">
+                        <img src="./frontEndPackage/images/color-logo.png" alt="" />
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <main style="background-image: url('./frontEndPackage/images/quality-bg.png')">
+            <div class="container form-container">
+                <nav aria-label="breadcrumb" class="mb-32 pt-3">
+                    <ol class="breadcrumb justify-content-end p-0 mb-0 fs-14">
+                        <li class="breadcrumb-item"><a href="/">首頁</a></li>
+                        <li class="breadcrumb-item" aria-current="page">聯絡我們</li>
+                    </ol>
+                </nav>
+
+                <p class="mb-4">
+                    我們歡迎您透過本信件表單詢問問題，我們會盡快回覆給您!!也歡迎您寫下相關的心得與建議，您的鼓勵是我們成長的動力!!
+                </p>
+
+                <form action="#" class="contact-form" onClick="formReset">
+                    <div class="row justify-content-between mb-3">
+                        <div class="d-flex align-items-center col-md-6 mb-3 mb-md-0">
+                            <label for="name" class="form-label mr-3 text-main position-relative">姓名</label>
+                            <input type="text" id="name" name="name" value="" class="p-2 form-control" />
+                        </div>
+                        <div class="d-flex align-items-center col-md-6">
+                            <label for="type" class="form-label mr-3 text-main position-relative">諮詢項目</label>
+                            <select name="type" id="type" class="form-control">
+                                <option value="" selected disabled>問題分類</option>
+                                <option value="type1">分類一</option>
+                                <option value="type2">分類二</option>
+                                <option value="type3">分類三</option>
+                                <option value="type4">分類四</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="d-flex justify-content-between align-items-center col-md-6 mb-3 mb-md-0">
+                            <label for="email" class="form-label mr-3 text-main">電子郵件</label>
+                            <input type="email" id="email" name="email" value="" class="form-control w-100 p-2" />
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center col-md-6">
+                            <label for="phone" class="form-label mr-3 text-main position-relative">手機</label>
+                            <input type="tel" id="phone" name="phone" value="" class="p-2 form-control" />
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <label for="message" class="form-label text-main mr-3">留言內容</label>
+                        <textarea name="message" id="message" rows="10" class="w-100 p-2 form-control"></textarea>
+                    </div>
+                    <div class="verificationBox d-flex">
+                        <label class="verificationCode text-main position-relative mr-3" for="verification">
+                            驗證碼
+                        </label>
+                        <div id="formVerification" class="flex-grow-1"></div>
+                        <p id="verificationCodeOK" class="validation-notice-1 d-none">請填寫正確驗證碼</p>
+                    </div>
+                    <div class="d-flex justify-content-center btns">
+                        <button type="submit" class="submit-btn mr-3">確認送出</button>
+                        <button type="button" onClick="formReset()">重新填寫</button>
+                    </div>
+                </form>
+            </div>
+            <section class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.8602307820197!2d121.57652200000001!3d25.072725999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac7b8c604a9d%3A0x3fb98d86aaa901fb!2zMTE05Y-w5YyX5biC5YWn5rmW5Y2A6Zm95YWJ6KGXMzgx6JmfNg!5e0!3m2!1szh-TW!2stw!4v1700210955070!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </section>
+        </main>
+
+        <footer style="background-image: url('./frontEndPackage/images/footer-building.png')">
+            <div class="container text-center d-flex flex-column">
+                <a class="mb-3" href="/">
+                    <img src="./frontEndPackage/images/logo-sm.png" alt="" />
+                </a>
+
+                <div class="text-white">
+                    <p>地址&nbsp&nbsp台北市內湖區陽光街381號6樓</p>
+                    <ul class="list-unstyled">
+                        <li>Tel&nbsp&nbsp<a href="tel:+886-2-2659-8049" class="text-white">02-2659-8049</a></li>
+                        <li>Mail&nbsp&nbsp<a href="mailto:ru3ru8@gmail.com" class="text-white"></a>ru3ru8@gmail.com</li>
+                    </ul>
+                </div>
+                <p class="text-white">Copyright © 久佳營造. All rights reserved.</p>
+            </div>
+
+            <ul class="photonic d-flex list-unstyled justify-content-center mb-0 pb-2 pb-lg-0 text-white">
+                傳訊光科技:&nbsp
+                <li>
+                    <a target="_blank" href="https://shop.photonic.com.tw/" target="_blank" class="text-white"
+                        >購物車&nbsp</a
+                    >/&nbsp
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.photonic.com.tw/" target="_blank" class="text-white"
+                        >網頁設計&nbsp</a
+                    >/&nbsp
+                </li>
+                <li>
+                    <a target="_blank" href="http://erp2000.com/" target="_blank" class="text-white">CRM</a>
+                </li>
+            </ul>
+        </footer>
+
+        <!-- 共用區塊 -->
+        <script src="./frontEndPackage/js/jquery.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+            crossorigin="anonymous"
+        ></script>
+        <!-- 特定 -->
+        <script src="./frontEndPackage/validation/verify.js"></script>
+        <script src="./frontEndPackage/js/all.js"></script>
+        <script type="text/javascript">
+            var codeVerifyCheck = true;
+
+            $("#formVerification").codeVerify({
+                type: 1,
+                width: "100%",
+                height: "38px",
+                fontSize: "30px",
+                codeLength: 4,
+                btnId: "check-btn",
+                ready: function () {},
+                success: function () {
+                    // alert('驗證成功');
+                    codeVerifyCheck = true;
+                },
+                error: function () {
+                    // alert('驗證失敗');
+                    codeVerifyCheck = false;
+                },
+            });
+
+            $(".varify-input-code").addClass("form-control");
+
+            function formReset() {
+                document.getElementsByClassName("contact-form").reset();
+            }
+        </script>
+    </body>
+</html>
