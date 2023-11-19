@@ -1,4 +1,5 @@
 .project-container{
+    // position:relative;
     padding-top:58px;
     @include small{
         padding-top:70px; 
@@ -6,7 +7,24 @@
     @include large{
         padding-top:75px; 
     }
+    .title{
+        :first-child {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            white-space: nowrap;
+            @include large {
+                font-size: 48px;
+            }
+        }
+        :last-child {
+            font-size: 20px;
+        }
+        @include large {
+            font-size: 24px;
+        }
+    }
 }
+
 .project-tabs {
     padding: 0px 30px;
     a {
@@ -45,5 +63,22 @@
             margin: 0px;
             background: transparent !important;
         }
+    }
+}
+
+.masonry{
+    //row-gap: 20px;
+    .item{
+        margin-bottom:30px;
+    }
+    .overlay{
+        background-image:linear-gradient(to bottom, transparent 80%, rgba(0,0,0,50%) 100%);
+        position: absolute;
+        top:0;
+        left:0;
+        height:100%;
+        @include padding(0,15px);
+        display:flex;
+        align-items:flex-end;
     }
 }

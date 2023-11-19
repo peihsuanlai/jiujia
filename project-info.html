@@ -104,158 +104,12 @@
         <nav aria-label="breadcrumb" class="mb-5 pt-3">
           <ol class="breadcrumb justify-content-end p-0 mb-0 fs-14">
             <li class="breadcrumb-item"><a href="/">首頁</a></li>
-            <li class="breadcrumb-item" aria-current="page">工程實績</li>
+            <li class="breadcrumb-item"><a href="/">工程實績</a></li>
+            <li class="breadcrumb-item" aria-current="page"> 108 新北市貢寮區行政大樓新建工程</li>
           </ol>
         </nav>
 
-        <div class="text-darkBlack title text-center mb-5">
-          <h3 class="font-weight-bold">PROJECTS</h3>
-          <h3>工程實績</h3>
-        </div>
-
-        <ul
-          class="fs-18 d-flex justify-content-center project-tabs mb-0 list-unstyled tab-carousel owl-carousel owl-theme mb-4"
-        >
-          <li class="item"><a href="###" class="active">私人建案</a></li>
-          <li class="item"><a href="###" class="">辦公大樓</a></li>
-        </ul>
-
-        <div class="masonry row mb-5">
-          <div
-            class="item col-lg-4 col-sm-6"
-          >
-            <a
-              href="./frontEndPackage/images/project6.png"
-              data-lightbox=""
-              data-title=""
-              class="position-relative"
-            >
-                <img
-                  src="./frontEndPackage/images/project6.png"
-                  alt=""
-                />
-              <div class="overlay">
-                <h2 class="text-white fs-20 mb-3">108 新北市貢寮區行政大樓新建工程</h2>
-              </div>
-            </a>
-            
-          </div>
-          <div
-            class="item col-lg-4 col-sm-6"
-          >
-            <a
-              href="./frontEndPackage/images/project8.png"
-              data-lightbox=""
-              data-title=""
-              class="position-relative"
-            >
-                <img
-                  src="./frontEndPackage/images/project8.png"
-                  alt=""
-                />
-              <div class="overlay">
-                <h2 class="text-white fs-20 mb-3">108松江和裕辦公大樓</h2>
-              </div>
-            </a>
-            
-          </div>
-          <div
-            class="item col-lg-4 col-sm-6"
-          >
-            <a
-              href="./frontEndPackage/images/project7.png"
-              data-lightbox=""
-              data-title=""
-              class="position-relative"
-            >
-                <img
-                  src="./frontEndPackage/images/project7.png"
-                  alt=""
-                />
-              <div class="overlay">
-                <h2 class="text-white fs-20 mb-3">108 新北市貢寮區行政大樓新建工程</h2>
-              </div>
-            </a>
-            
-          </div>
-          <div
-            class="item col-lg-4 col-sm-6"
-          >
-            <a
-              href="./frontEndPackage/images/project4.png"
-              data-lightbox=""
-              data-title=""
-              class="position-relative"
-            >
-                <img
-                  src="./frontEndPackage/images/project4.png"
-                  alt=""
-                />
-              <div class="overlay">
-                <h2 class="text-white fs-20 mb-3">108蘆竹區老人福利中心</h2>
-              </div>
-            </a>
-            
-          </div>
-          <div
-            class="item col-lg-4 col-sm-6"
-          >
-            <a
-              href="./frontEndPackage/images/project2.png"
-              data-lightbox=""
-              data-title=""
-              class="position-relative"
-            >
-                <img
-                  src="./frontEndPackage/images/project2.png"
-                  alt=""
-                />
-              <div class="overlay">
-                <h2 class="text-white fs-20 mb-3">112桃園市大溪阿姆坪水上運動訓練基地統包工程</h2>
-              </div>
-            </a>
-            
-          </div>
-          <div
-          class="item col-lg-4 col-sm-6"
-        >
-          <a
-            href="./frontEndPackage/images/project5.png"
-            data-lightbox=""
-            data-title=""
-            class="position-relative"
-          >
-              <img
-                src="./frontEndPackage/images/project5.png"
-                alt=""
-              />
-            <div class="overlay">
-              <h2 class="text-white fs-20 mb-3">111大安學府危老重建工程</h2>
-            </div>
-          </a>
-          
-        </div>
-        <div
-        class="item col-lg-4 col-sm-6"
-      >
-        <a
-          href="./frontEndPackage/images/project3.png"
-          data-lightbox=""
-          data-title=""
-          class="position-relative"
-        >
-            <img
-              src="./frontEndPackage/images/project3.png"
-              alt=""
-            />
-          <div class="overlay">
-            <h2 class="text-white fs-20 mb-3">111克強公園游泳池暨新生公園網球場改建全民運動館統包工程</h2>
-          </div>
-        </a>
-        
-      </div>
-         
-        </div>
+       
 
         <ul
           class="paginition d-flex justify-content-center mb-0 pb-5 align-items-center list-unstyled"
@@ -345,46 +199,8 @@
     ></script>
     <!-- 特定 -->
     <script src="./frontEndPackage/owlcarousel/owl.carousel.min.js"></script>
-    <script src="./frontEndPackage/js/masonry.min.js"></script>
-    <script src="./frontEndPackage/js/imagesloaded.js"></script>
+]
     <script src="./frontEndPackage/js/all.js"></script>
-    <script>
-      $(function () {
-        //頁籤輪播
-        $(".tab-carousel").owlCarousel({
-          loop: false,
-          autoplay: false,
-          dots: false,
-          nav: true,
-          //margin: 10,
-          autoWidth: true,
-          responsive: {
-            0: {
-              items: 3,
-            },
-            768: {
-              items: 4,
-            },
-            992: {
-              items: 5,
-            },
-          },
-        });
-        
-        var $container = $('.masonry');
-        $container.imagesLoaded(function () {
-            $container.masonry({
-            itemSelector: '.item',
-            columnWidth: '.item',
-            percentPosition: true,
-            animate: true,
-            horizontalOrder: true,
-            originTop: true
-            })
-        });
-    
-    
-    });
-    </script>
+   
   </body>
 </html>
